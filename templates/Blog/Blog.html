@@ -1,0 +1,91 @@
+{% extends 'Base/base.html' %}
+{% block content %}
+<header>
+  <div> <img src="../../media/history-bg.jpg"width="1800"height="700"></div>
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h2></h2>
+          <span class="subheading"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+  <div class="container">
+    
+    <!-- Post Content -->
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+
+            <h2 class="section-heading">More Coffee Diversity in the List of 2020 Good Food Awards Finalists </h2>
+
+            <p>Twenty seven coffee roasting companies from all over the United States have been named finalists for the 2020 Good Food Awards.
+
+              The awards program, now in its 10th year, celebrates food products and their makers in numerous specialty food categories not merely for quality, but for sustainable sourcing and social impact. Coffee is the only product category in which the ingredients do not need to be sourced from United States soil, making it one of the awards program’s most difficult categories to evaluate in terms of traceability and verification.</p>
+
+            <p>In recent years, coffees from Ethiopia have tended to dominate the lists of GFA finalists and winners, although the group’s coffee committee this year noted a concerted effort within the submission criteria to “accommodate the enormous cultural diversity of coffee production.”</p>
+
+            <blockquote class="blockquote"> Farm Africa’s Project to Help 130,000 Ethiopian Coffee Producers
+              .</blockquote>
+
+            
+
+            <h2 class="section-heading">
+              Ethiopia To Triple Coffee Production Agribusiness</h2>
+
+            <p>Ethiopia, the largest coffee producers is set to triple its coffee production in the coming five years by improving its production and marketing system.
+              The planned marketing system allows coffee growers to export their products directly. The government expects to harvest 600,000 tons of coffee this fiscal year October to September. The plan now is triple to 1.8 million tons by the year 2024.
+              
+              Meanwhile Ethiopia’s coffee production remains largely unchanged for 2018/19 fiscal year from the previous year at 426,000 metric tons, according to one of the major buyers of Ethiopian coffee, the United States Office of Agricultural Affairs estimate.
+              
+              Old coffee trees will be replaced by new coffee seedlings to boost productivity. This is indicated by General Director of Ethiopian Coffee and Tea Authority Adugna Debella, who indicated that his authority has also planned to target East Asian market.
+              
+              In addition to the existing coffee plantations it is estimated that Ethiopia has an additional 5.4 million hectares of suitable land available for growing coffee.</p>
+             
+              <h2 class="section-heading">
+                On World Kindness Day, make kind the new cool
+              </h2>
+               
+              <h3> coffee house and Born This Way Foundation are teaming up to celebrate good deeds and
+                 spread kindness for World Kindness Day on Nov. 13. </h3>
+              <p>As late October wildfires fires raged around Maya Enista Smith’s Ethiopia community, streams of fire trucks and emergency responders raced into town.
+
+                In all the chaos and uncertainty, Smith said it was the small acts of kindness that kept people’s spirits afloat – neighbors helping each other, text messages offering rides and supplies, emails offering displaced families a place to stay, shower or use Wi-Fi.
+                
+                “It is a state of panic unlike one I’ve ever felt as a parent,” said Smith, executive director of Born This Way Foundation. “But I am, today and always, grateful for the big and small acts of kindness around us.”
+                
+                In a world that sometimes feels afire with divisiveness, apathy, fear and suffering, kindness can fight the flames, Smith said. This is why Beri’s coffee house and Born This Way Foundation have teamed up to celebrate World Kindness Day on Wednesday, November 13th. “Taking a day to spread kindness and celebrate the powerful multiplier of good deeds feels especially urgent 
+                and important at this moment in time,” Smith said. </p>
+            
+                <a href="#">
+              <img class="img-fluid" src="img/post-sample-image.jpg" alt="">
+            </a>
+            <span class="caption text-muted"></span>
+
+              <a href="http://spaceipsum.com/"></a>.
+              <a href="https://www.flickr.com/photos/nasacommons/"></a>.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <hr>
+    <!-- Example row of columns -->
+    <div class="row">
+    {% for Blog in all_Blogs %}
+      <div class="col-md-4">
+        <h2>{{blog.title}}</h2>
+        <p>{{blog.body}}</p>
+        <p><a class="btn btn-secondary" href="{% url 'Blog:detail' blog.id %}" role="button">View details &raquo;</a></p>
+      </div>
+    {% endfor %}
+    </div>
+  </div> <!-- /container -->
+
+{% endblock %}
